@@ -1,0 +1,162 @@
+/* EMI Calculator container */
+.emi-calculator-container {
+  background-color: #2C3E50; /* Darker background for the EMI container */
+  padding: 3rem; /* Increased padding to make the container spacious */
+  border-radius: 10px; /* Slightly rounder corners for a modern look */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Bigger shadow for stronger visual effect */
+  max-width: 500px; /* Increased max-width for a larger container */
+  width: 100%;
+  margin: 60px auto; /* Centering the container with margin */
+}
+
+/* Heading Style */
+.emi-heading {
+  text-align: center;
+  color: #ECF0F1; /* Light grey for the heading text */
+  font-size: 2.5rem; /* Larger font size for the heading */
+  margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+/* Input container styling */
+.emi-input-container {
+  margin: 1rem 0;
+}
+
+.emi-input-container label {
+  display: block;
+  font-size: 16px;
+  color: #BDC3C7; /* Softer light grey for the labels */
+}
+
+.emi-input-container input {
+  width: 100%;
+  padding: 15px; /* Larger padding for the input fields */
+  margin-top: 10px; /* More spacing between label and input */
+  border: 1px solid #3498DB; /* Lighter blue border */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 18px; /* Larger font size for better readability */
+  background-color: #ECF0F1; /* Light background for input fields */
+  color: #2C3E50; /* Darker text for readability */
+}
+
+.emi-input-container input:focus {
+  border-color: #1ABC9C; /* Teal border on focus */
+  outline: none; /* Remove the default outline on focus */
+}
+
+/* Calculate Button */
+.emi-calculate-btn {
+  width: 100%;
+  padding: 15px; /* Larger padding for better button size */
+  background-color:  #1ABC9C; 
+  color: white;
+  border: none;
+  border-radius: 6px; /* More rounded corners for the button */
+  font-size: 20px; /* Larger font size */
+  cursor: pointer;
+  margin-top: 1.5rem; /* More margin for spacing */
+  transition: background-color 0.3s ease;
+}
+
+.emi-calculate-btn:hover {
+  background-color:#16A085 ; /* Darker blue background on hover */
+}
+
+/* Error Message */
+.emi-error-message {
+  color: #E74C3C; /* Red color for error messages */
+  text-align: center;
+  font-size: 16px; /* Larger font size for error text */
+  margin-top: 1.5rem; /* More margin for better spacing */
+}
+
+/* Result Section */
+.emi-result {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+  margin-top: -30px; /* More margin for spacing */
+  text-align: center;
+
+  padding-bottom: 50px;
+}
+
+/* General padding and margin adjustments for spacing */
+.emi-calculator-container p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile Responsiveness for smaller screens */
+@media (max-width: 767px) {
+  .emi-calculator-container {
+    padding: 2rem; /* Reduced padding for mobile screens */
+    margin: 40px auto; /* Adjusted margin for better centering */
+    max-width: 100%; /* Full width container on small screens */
+  }
+
+  .emi-heading {
+    font-size: 2rem; /* Slightly smaller font size for heading */
+    margin-bottom: 1.2rem; /* Reduced margin for heading */
+  }
+
+  .emi-input-container label {
+    font-size: 14px; /* Slightly smaller font size for labels */
+  }
+
+  .emi-input-container input {
+    font-size: 16px; /* Slightly smaller font size for input fields */
+    padding: 12px; /* Reduced padding for input fields */
+  }
+
+  .emi-calculate-btn {
+    font-size: 18px; /* Slightly smaller button font size */
+    padding: 12px; /* Reduced padding for the button */
+    margin-top: 1.2rem; /* Reduced margin for button */
+  }
+
+  .emi-error-message {
+    font-size: 14px; /* Smaller error message font size */
+  }
+
+  .emi-result {
+    font-size: 1.2rem; /* Slightly smaller result font size */
+    padding-bottom: 20px; /* Reduced padding bottom for result */
+    margin-top: 0; /* Removed margin top */
+  }
+}
+
+/* Extra small screen responsiveness for very narrow devices */
+@media (max-width: 320px) {
+  .emi-calculator-container {
+    padding: 1rem; /* Further reduced padding for ultra-small screens */
+    margin: 20px auto; /* Further reduced margin */
+  }
+
+  .emi-heading {
+    font-size: 1.5rem; /* Even smaller font size for heading */
+  }
+
+  .emi-input-container label {
+    font-size: 12px; /* Even smaller font size for labels */
+  }
+
+  .emi-input-container input {
+    font-size: 14px; /* Even smaller font size for input fields */
+    padding: 10px; /* Further reduced padding for input fields */
+  }
+
+  .emi-calculate-btn {
+    font-size: 16px; /* Even smaller button font size */
+    padding: 10px; /* Further reduced padding for the button */
+    margin-top: 1rem; /* Reduced margin for button */
+  }
+
+  .emi-error-message {
+    font-size: 12px; /* Even smaller font size for error messages */
+  }
+
+  .emi-result {
+    font-size: 1rem; /* Even smaller result font size */
+  }
+}

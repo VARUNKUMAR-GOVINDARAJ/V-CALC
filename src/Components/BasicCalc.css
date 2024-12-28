@@ -1,0 +1,93 @@
+/* Container for the entire calculator */
+.basic-calculator-container {
+  width: 90%;
+  max-width: 360px;
+  margin: 50px auto;
+  background-color: #2C3E50;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading style */
+.basic-heading {
+  font-size: 1.8rem;
+  color: #ECF0F1;
+  margin-bottom: 1rem;
+}
+
+/* Screen where input and result are displayed */
+.basic-screen {
+  margin-bottom: 1rem;
+}
+
+.basic-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #ECF0F1;
+  color: #2C3E50;
+  border: 1px solid #3498DB;
+  border-radius: 6px;
+  text-align: right;
+}
+
+/* Result text below the input */
+.basic-result p {
+  font-size: 1.5rem;
+  color: #1ABC9C;
+  margin-top: 10px;
+  padding-bottom: 50px;
+}
+
+/* Button styles */
+.basic-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-items: stretch;
+}
+
+.basic-btn {
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #3498DB;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.basic-btn:hover {
+  background-color: #2980B9;
+}
+
+/* Color adjustments for special buttons */
+.basic-btn.red {
+  background-color: #E74C3C;
+}
+
+.basic-btn.red:hover {
+  background-color: #C0392B;
+}
+
+.basic-btn.green {
+  background-color: #2ECC71;
+}
+
+.basic-btn.green:hover {
+  background-color: #27AE60;
+}
+
+/* Focus styles for buttons */
+.basic-btn:focus {
+  outline: none;
+}
+
+/* Remove extra spaces or margins for paragraphs */
+.basic-calculator-container p {
+  margin: 0;
+  padding: 0;
+}

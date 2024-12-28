@@ -1,0 +1,167 @@
+/* Age Calculator Container */
+.age-homepage {
+  margin-top: 0px !important;
+  background-color: #2C3E50; /* Darker but softer background for the container */
+  padding: 3rem; /* Increase padding to make the container more spacious */
+  border-radius: 10px; /* Slightly rounder corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Bigger shadow for a stronger visual effect */
+  max-width: 500px; /* Increase the max width for a larger container */
+  width: 100%;
+  margin: 60px auto; /* More margin for better centering */
+}
+
+/* Heading Style */
+.age-head {
+  text-align: center;
+  color: #ECF0F1; /* Light grey for heading text */
+  font-size: 2.5rem; /* Larger font size for the heading */
+  margin-bottom: 1.5rem; /* Increased margin for more space */
+}
+
+/* Paragraph text style */
+.age-p1 {
+  color: #BDC3C7; /* Softer light grey */
+  font-size: 1rem; /* Larger font size for better readability */
+  text-align: left; /* Left align the paragraph text */
+  margin-bottom: 1rem; /* Increased margin for better spacing */
+}
+
+/* Input container styling */
+.age-input {
+  width: 100%;
+  padding: 15px; /* Increased padding for larger input fields */
+  margin-top: 10px; /* Increased margin for better spacing */
+  border: 1px solid #3498DB; /* Lighter blue border */
+  border-radius: 6px; /* Slightly more rounded corners */
+  font-size: 18px; /* Larger font size for input */
+  background-color: #ECF0F1; /* Light background for input field */
+  color: #2C3E50; /* Dark text for readability */
+}
+
+.age-input:focus {
+  border-color: #1ABC9C; /* Teal border on focus */
+  outline: none; /* Removes default outline */
+}
+
+/* Button styling */
+.age-btn {
+  width: 100%;
+  padding: 15px; /* More padding for larger buttons */
+  background-color: #1ABC9C; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 6px; /* More rounded corners for buttons */
+  font-size: 20px; /* Larger font size for the button */
+  cursor: pointer;
+  margin-top: 1.5rem; /* More margin for spacing */
+  transition: background-color 0.3s ease;
+}
+
+.age-btn:hover {
+  background-color: #16A085; /* Slightly darker blue on hover */
+}
+
+/* Error message styling */
+.age-error {
+  color: #E74C3C; /* Red for error messages */
+  text-align: center;
+  font-size: 16px; /* Larger font size for error messages */
+  margin-top: 1rem !important; /* Increased margin for spacing */
+}
+
+/* Age result styling */
+.age-result {
+  margin-top: 2.5rem; /* More margin for spacing */
+  text-align: center;
+}
+
+.age-result p {
+  margin-top: -20px;
+  color:black; /* Teal text color for the result */
+  font-size: 1.5rem; /* Larger font size for the result */
+}
+
+/* General padding and margin adjustments for spacing */
+.age-homepage p {
+  margin: 0;
+  padding: 0;
+}
+   
+
+/* Mobile Responsiveness for smaller screens */
+@media (max-width: 767px) {
+  .age-homepage {
+    margin-top: 0px !important;
+    padding: 1.5rem; /* Reduced padding for mobile */
+    margin: 20px auto; /* Adjust margin to make it centered on small screens */
+    max-width: 100%; /* Ensure the container takes up full width */
+  }
+
+  .age-head {
+    font-size: 1.8rem; /* Smaller heading font */
+    margin-bottom: 1rem; /* Reduced margin for better spacing */
+  }
+
+  .age-p1 {
+    font-size: 0.9rem; /* Smaller font size for paragraph */
+    margin-bottom: 0.8rem; /* Reduced margin */
+  }
+
+  .age-input {
+    font-size: 16px; /* Slightly smaller input font */
+    padding: 12px; /* Reduced padding for input fields */
+  }
+
+  .age-btn {
+    font-size: 16px; /* Reduced font size for button */
+    padding: 12px; /* Reduced padding for button */
+    margin-top: 1rem; /* Reduced margin for the button */
+  }
+
+  .age-error {
+    font-size: 14px; /* Smaller font size for error messages */
+    margin-top: 1rem; /* Increased margin for spacing */
+  }
+
+  .age-result p {
+    font-size: 1.2rem; /* Smaller font size for the result */
+    margin-top: 10px; /* Reduced margin */
+  }
+}
+
+/* Extra small screen responsiveness for very narrow devices */
+@media (max-width: 320px) {
+  .age-homepage {
+    margin-top: 0px !important;
+    padding: 1rem; /* Compact padding for ultra-small screens */
+    margin: 10px auto; /* Further reduced margin */
+  }
+
+  .age-head {
+    font-size: 1.4rem; /* Smaller font size for heading */
+  }
+
+  .age-p1 {
+    font-size: 0.8rem; /* Smaller font size for paragraph */
+    margin-bottom: 0.5rem; /* Further reduced margin */
+  }
+
+  .age-input {
+    font-size: 14px; /* Smaller font size for input */
+    padding: 10px; /* Reduced padding for input */
+  }
+
+  .age-btn {
+    font-size: 14px; /* Reduced font size for button */
+    padding: 10px; /* Reduced padding */
+    margin-top: 0.8rem; /* Compact button margin */
+  }
+
+  .age-error {
+    font-size: 12px; /* Smaller error message font */
+  }
+
+  .age-result p {
+    font-size: 1rem; /* Even smaller result font */
+  }
+}

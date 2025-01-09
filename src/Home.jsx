@@ -9,21 +9,17 @@ const Home = () => {
   const [showContactModal, setShowContactModal] = useState(false);
 
   const toggleOffcanvas = () => setShow(!show);
-
   const handleAboutModalShow = () => setShowAboutModal(true);
   const handleAboutModalClose = () => setShowAboutModal(false);
-
   const handleContactModalShow = () => setShowContactModal(true);
   const handleContactModalClose = () => setShowContactModal(false);
 
   return (
-    <div className="home" >
+    <div className="home">
       {/* Navbar */}
       <Navbar bg="dark" variant="dark" expand="lg" className="home-navbar">
         <Container fluid>
-          <Navbar.Brand href="#" className="me-auto">
-            V CALC
-          </Navbar.Brand>
+          <Navbar.Brand href="#" className="me-auto">V CALC</Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleOffcanvas} />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
@@ -33,91 +29,62 @@ const Home = () => {
             onHide={toggleOffcanvas}
             className="home-navbar-offcanvas"
           >
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header closeButton style={{ backgroundColor: 'white', color: 'black' }}>
               <Offcanvas.Title id="offcanvasNavbarLabel">V CALC</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="home-offcanvas-body">
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#" onClick={handleContactModalShow}>Contact</Nav.Link>
-                <Nav.Link href="#" onClick={handleAboutModalShow}>About</Nav.Link>
+                <Nav.Link href="#" onClick={handleContactModalShow} style={{color:'white'}}>Contact</Nav.Link>
+                <Nav.Link href="#" onClick={handleAboutModalShow} style={{color:'white'}}>About</Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
 
-      {/* Body */}
+      {/* Body Content */}
       <Container className="home-mt-5">
-        <h1 className="text-center home-mb-4" >V CALC</h1>
+        <h1 className="home-mb-4">V CALC</h1>
 
-        {/* Card with 5 Calculators */}
+        {/* Card Section */}
         <Row className="home-g-4">
-          <Col sm={12} md={4}>
-            <Card className="home-card">
-              <Card.Body className="home-card-body">
-                <Card.Title className="home-card-title">Basic Calculator</Card.Title>
-                <Link to="/basic"> <Button variant="primary" className="home-button">Go</Button> </Link>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col sm={12} md={4}>
-            <Card className="home-card">
-              <Card.Body className="home-card-body">
-                <Card.Title className="home-card-title">Age Calculator</Card.Title>
-                <Link to="/age"> <Button variant="primary" className="home-button">Go</Button> </Link>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col sm={12} md={4}>
-            <Card className="home-card">
-              <Card.Body className="home-card-body">
-                <Card.Title className="home-card-title">EMI Calculator</Card.Title>
-                <Link to="/emi"> <Button variant="primary" className="home-button">Go</Button> </Link>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col sm={12} md={4}>
-            <Card className="home-card">
-              <Card.Body className="home-card-body">
-                <Card.Title className="home-card-title">BMI Calculator</Card.Title>
-                <Link to="/bmi"> <Button variant="primary" className="home-button">Go</Button> </Link>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col sm={12} md={4}>
-            <Card className="home-card">
-              <Card.Body className="home-card-body">
-                <Card.Title className="home-card-title">GST Calculator</Card.Title>
-                <Link to="/gst"> <Button variant="primary" className="home-button">Go</Button> </Link>
-              </Card.Body>
-            </Card>
-          </Col>
+          {['Basic', 'Age', 'EMI', 'BMI', 'GST'].map((calc, index) => (
+            <Col sm={12} md={4} key={index}>
+              <Card className="home-card">
+                <Card.Body className="home-card-body">
+                  <Card.Title className="home-card-title">{calc} Calculator</Card.Title>
+                  <Link to={`/${calc.toLowerCase()}`}>
+                    <Button variant="primary" className="home-button">Go</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
         </Row>
       </Container>
 
       {/* Footer */}
       <footer className="home-footer">
-        <p>Created by Varun Kumar G | Linkedin id : Varun Kumar Govindaraj </p>
+        <p> Created by Varun Kumar G | LinkedIn: Varun Kumar G </p>
       </footer>
 
       {/* About Modal */}
       <Modal show={showAboutModal} onHide={handleAboutModalClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="home-modal-title">About </Modal.Title>
+          <Modal.Title className="home-modal-title">About</Modal.Title>
         </Modal.Header>
         <Modal.Body className="home-modal-body">
-          <p>
-            <b> V CALC </b> is an web application that provides 5 types of calculators:
+          <p><b>V CALC</b> is a web application with 5 types of calculators:
             <ul>
               <b>
-              <li>Basic Calculator</li>
-              <li>Age Calculator</li>
-              <li>EMI Calculator</li>
-              <li>BMI Calculator</li>
-              <li>GST Calculator</li>
+                <li>Basic Calculator</li>
+                <li>Age Calculator</li>
+                <li>EMI Calculator</li>
+                <li>BMI Calculator</li>
+                <li>GST Calculator</li>
               </b>
             </ul>
-            This web application is created by <b> Varun Kumar G</b>.
+            Created by <b>Varun Kumar G</b>.
           </p>
         </Modal.Body>
         <Modal.Footer className="home-modal-footer">
@@ -131,7 +98,7 @@ const Home = () => {
           <Modal.Title className="home-modal-title">Contact</Modal.Title>
         </Modal.Header>
         <Modal.Body className="home-modal-body">
-          <p>Mail address: <strong>varunkumar.govindaraj@gmail.com</strong></p>
+          <p>Mail address: <b><a href="mailto:varunkumar.govindaraj@gmail.com" className="h-m-a">varunkumar.govindaraj@gmail.com</a></b></p>
         </Modal.Body>
         <Modal.Footer className="home-modal-footer">
           <Button variant="primary" onClick={handleContactModalClose}>Close</Button>

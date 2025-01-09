@@ -1,28 +1,29 @@
-
+/* Home Specific Styling */
 .home {
   min-height: 100vh;
-  background-color: #2C3E50; /* Dark background for the home page */
+  background-color: #2C3E50; /* Dark background */
   color: white;
-  padding-bottom: 60px; /* Space for fixed footer */
-  padding-top: 140px; /* Added top padding to avoid navbar covering content */
+  padding-bottom: 60px; /* Space for footer */
+  padding-top: 140px; /* Padding to avoid navbar covering content */
 }
-/* Heading */
+
+/* Heading Styling */
 .home h1 {
   font-size: 2.5rem;
-  color: #ECF0F1; /* Light grey for the header */
+  color: #ECF0F1; /* Light grey */
   margin-bottom: 2rem;
   text-align: center;
 }
 
-
+/* Navbar Styling */
 .home-navbar {
   z-index: 20;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   padding: 1rem;
-  background-color: #2C3E50; /* Darker background */
-  border-bottom: 2px solid #1ABC9C; /* Teal border at the bottom */
-  top: 0; /* Fix the navbar at the top */
+  background-color: #2C3E50; /* Dark background */
+  border-bottom: 2px solid #1ABC9C; /* Teal border */
+  top: 0;
 }
 
 .home-navbar .navbar-brand {
@@ -34,50 +35,44 @@
 .home-navbar .navbar-nav .nav-link {
   font-size: 1rem;
   font-weight: 500;
-  color: #ECF0F1; /* Light grey for text */
-  background-color: transparent; /* Transparent background for links */
-  border: none; /* Remove any borders */
+  color: #ECF0F1;
+  background-color: transparent;
+  border: none;
 }
 
 .home-navbar .navbar-nav .nav-link:hover {
-  color: #1ABC9C; /* Teal on hover */
-  background-color: transparent; /* No background on hover */
+  color: #1ABC9C !important; /* Teal on hover */
 }
 
-/* Offcanvas Styling */
 .home-offcanvas-header {
   background-color: #2C3E50;
   color: #ECF0F1;
 }
 
 .home-offcanvas-body {
-  background-color: transparent; /* Transparent background for the offcanvas */
-}
-
-.home-offcanvas-body .nav-link {
   font-size: 1.1rem;
-  color: #1ABC9C; /* Teal for offcanvas links */
+  background-color: #212529; /* Dark background */
 }
 
-.home-offcanvas-body .nav-link:hover {
-  color: #81d4fa; /* Light blue for hover effect */
+.nav-link:hover {
+  color: #81d4fa; /* Light blue on hover */
 }
 
-/* Cards Styling */
+/* Cards Section Styling */
 .home-g-4 {
   display: flex;
-  justify-content: center; /* Center the cards */
+  justify-content: center;
   gap: 1rem;
-
+  flex-wrap: wrap;
 }
 
 .home-card {
-  background-color: #34495E; /* Darker card background */
+  background-color: #34495E;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  max-width: 350px; /* Restrict card size */
+  max-width: 350px;
 }
 
 .home-card:hover {
@@ -87,7 +82,7 @@
 .home-card-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #ECF0F1; /* Light grey title */
+  color: #ECF0F1;
 }
 
 .home-card-body {
@@ -98,7 +93,7 @@
 /* Button Styling */
 .home-button {
   width: 100%;
-  background-color: #1ABC9C; /* Teal color for buttons */
+  background-color: #1ABC9C;
   color: white;
   border: none;
   padding: 0.75rem;
@@ -108,47 +103,32 @@
 }
 
 .home-button:hover {
-  background-color: #16A085; /* Darker teal on hover */
+  background-color: #16A085;
 }
 
 /* Footer Styling */
 .home-footer {
-
   margin-top: 50px;
   margin-bottom: -50px;
-  background-color: #2C3E50; /* Dark background */
+  background-color: #2C3E50;
   color: #ECF0F1;
   font-size: 1rem;
   padding: 1rem;
   text-align: center;
-  /* position: fixed; */
-  /* bottom: 0; */
   width: 100%;
-  border-top: 2px solid #1ABC9C; /* Teal top border */
-}
-
-/* Spacing for elements */
-.home-mt-5 {
-  margin-top: 0px;
-
-}
-
-.home-mb-4 {
-  /* margin-top: 5rem; */
-
-  margin-bottom: 2rem !important;;
+  border-top: 2px solid #1ABC9C;
 }
 
 /* Modal Styles */
 .home-modal-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2C3E50; /* Dark text for modal title */
+  color: #2C3E50;
 }
 
 .home-modal-body {
   font-size: 1.1rem;
-  color: #2C3E50; /* Dark text */
+  color: #2C3E50;
 }
 
 .home-modal-footer {
@@ -157,20 +137,33 @@
 
 /* Media Queries for responsiveness */
 @media (max-width: 767px) {
-  
   .home-card-title {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 
   .home-button {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .home-footer {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
-  .home-card{
+
+  .home-card {
     margin: auto;
+    width: 90%;
   }
 }
- 
+
+@media (max-width: 350px) {
+  .h-m-a {
+    font-size: small;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+  }
+}
